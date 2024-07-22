@@ -21,8 +21,5 @@ export class HotelFilterComponent {
     );
 
     this.filteredHotels.set(filteredHotels);
-
-    console.log('filteredHotels', this.filteredHotels());
-    console.log('hotels', this.hotels());
   }
 }
