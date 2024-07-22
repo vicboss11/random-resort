@@ -29,6 +29,7 @@
     "@angular/compiler-cli": "17.1.0",
     "@faker-js/faker": "8.4.1",
     "@types/jasmine": "5.1.0",
+    "autoprefixer": "^10.4.19",
     "concurrently": "8.2.2",
     "faker": "6.6.6",
     "jasmine-core": "5.1.0",
@@ -38,6 +39,8 @@
     "karma-coverage": "2.2.0",
     "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "2.1.0",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
     "typescript": "5.3.2"
   }
 }
