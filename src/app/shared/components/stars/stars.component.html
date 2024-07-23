@@ -1,0 +1,19 @@
+<div class="flex items-center mt-2">
+  <span class="hidden">Estrellas</span>
+
+  <div class="flex items-center">
+    @for (star of stars; track $index) {
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 text-yellow-500"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 0l2.45 6.29 6.29.19-4.82 4.41 1.43 6.25-5.35-3.59-5.35 3.59 1.43-6.25-4.82-4.41 6.29-.19L10 0z"
+      />
+    </svg>
+    }
+  </div>
+</div>
