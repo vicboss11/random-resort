@@ -1,17 +1,28 @@
-<section>
+<section class="hotel-list">
   <h2 class="text-2xl">Listado de Hoteles</h2>
 
   @if (hotels().length > 0) {
-  <section class="flex">
-    <aside class="max-w-[400px] w-full">
+  <section class="hotel-list__container grid">
+    <aside class="hotel-list__aside max-w-[400px] w-full">
       <app-hotel-filter></app-hotel-filter>
     </aside>
 
-    <article class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <article class="hotel-list__article">
       @for (hotel of filteredHotels(); track hotel.id) {
       <app-hotel-item [hotel]="hotel"></app-hotel-item>
+      } @empty {
+      <p>No se encontraron hoteles con los filtros seleccionados</p>
       }
     </article>
+
+    <nav class="hotel-list__nav">
+      <app-pagination
+        [totalItems]="totalItems()"
+        [itemsPerPage]="itemsPerPage()"
+        [currentPage]="currentPage()"
+        (pageChange)="onPageChange($event)"
+      />
+    </nav>
   </section>
   }
 </section>
