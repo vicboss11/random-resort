@@ -7,6 +7,7 @@
       "@app/*": ["app/*"],
       "@features/*": ["app/features/*"],
       "@layout/*": ["app/layout/*"],
+      "@shared/*": ["app/shared/*"],
       "@assets/*": ["assets/*"],
       "@environments/*": ["environments/*"]
     },
