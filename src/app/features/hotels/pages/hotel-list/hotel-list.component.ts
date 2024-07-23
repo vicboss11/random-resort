@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HotelItemComponent } from '../../components/hotel-item/hotel-item.component';
-import { HotelFilterComponent } from '../../components/hotel-filter/hotel-filter.component';
-import { HotelService } from '../../services/hotel/hotel.service';
-import { HotelFilterService } from '../../services/hotel-filter/hotel-filter.service';
-import { PaginationComponent } from '@app/shared/components/pagination/pagination.component';
+import { HotelItemComponent } from '@features/hotels/components/hotel-item/hotel-item.component';
+import { HotelFilterComponent } from '@features/hotels/components/hotel-filter/hotel-filter.component';
+import { HotelService } from '@features/hotels/services/hotel/hotel.service';
+import { HotelFilterService } from '@features/hotels/services/hotel-filter/hotel-filter.service';
+import { PaginationComponent } from '@shared/components/pagination/pagination.component';
 
 @Component({
   standalone: true,

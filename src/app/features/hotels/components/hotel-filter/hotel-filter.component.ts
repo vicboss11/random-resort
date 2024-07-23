@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { FilterCheckbox, FilterRange } from '@app/shared/models/filter.model';
-import { HotelFilterService } from '../../services/hotel-filter/hotel-filter.service';
 import {
   filterPriceOptions,
   filterRateOptions,
   filterStarOptions,
-} from '../../constants/hotel-filter';
-import { FilterSearchComponent } from '@app/shared/components/filter-search/filter-search.component';
-import { FilterRangeComponent } from '@app/shared/components/filter-range/filter-range.component';
-import { FilterCheckboxComponent } from '@app/shared/components/filter-checkbox/filter-checkbox.component';
+} from '@features/hotels/constants/hotel-filter';
+import { HotelFilterService } from '@features/hotels/services/hotel-filter/hotel-filter.service';
+import { FilterSearchComponent } from '@shared/components/filter-search/filter-search.component';
+import { FilterRangeComponent } from '@shared/components/filter-range/filter-range.component';
+import { FilterCheckboxComponent } from '@shared/components/filter-checkbox/filter-checkbox.component';
+import { FilterCheckbox, FilterRange } from '@shared/models/filter.model';
 
 @Component({
   selector: 'app-hotel-filter',

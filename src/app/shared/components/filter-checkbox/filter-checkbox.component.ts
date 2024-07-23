@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FilterCheckbox } from '@app/shared/models/filter.model';
+import { FilterCheckbox } from '@shared/models/filter.model';
 
 @Component({
   selector: 'app-filter-checkbox',

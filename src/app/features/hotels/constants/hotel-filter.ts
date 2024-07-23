@@ -1,4 +1,4 @@
-import { FilterCheckbox, FilterRange } from '@app/shared/models/filter.model';
+import { FilterCheckbox, FilterRange } from '@shared/models/filter.model';
 
 export const filterStarOptions: FilterCheckbox[] = [
   {

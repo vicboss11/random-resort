@@ -1,11 +1,11 @@
 import { Injectable, signal } from '@angular/core';
-import { Hotel } from '@features/hotels/models/hotel.model';
-import { HotelService } from '../hotel/hotel.service';
-import { FilterCheckbox } from '@app/shared/models/filter.model';
 import {
   filterPriceOptions,
   filterRateOptions,
-} from '../../constants/hotel-filter';
+} from '@features/hotels/constants/hotel-filter';
+import { FilterCheckbox } from '@shared/models/filter.model';
+import { Hotel } from '@features/hotels/models/hotel.model';
+import { HotelService } from '@features/hotels/services/hotel/hotel.service';
 
 @Injectable({
   providedIn: 'root',

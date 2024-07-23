@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
-import { catchError, Observable, of, tap } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 import { environment } from '@environments/environment';
 import { Hotel } from '@features/hotels/models/hotel.model';
 
