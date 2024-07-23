@@ -18,33 +18,47 @@ export class HotelFilterService {
 
   filteredHotels = signal<Hotel[]>([]);
 
+  totalItems = signal<number>(0);
+  itemsPerPage = signal<number>(10);
+  currentPage = signal<number>(1);
+
   constructor(private readonly hotelService: HotelService) {}
 
   setSearchTerm(searchTerm: string): void {
     this.searchTerm = searchTerm;
 
+    this.currentPage.set(1);
     this.applyFilters();
   }
 
   setSelectedStars(selectedStars: FilterCheckbox[]): void {
     this.selectedStars = selectedStars;
 
+    this.currentPage.set(1);
     this.applyFilters();
   }
 
   setRateRange(rateRange: number): void {
     this.rateRange = rateRange;
 
+    this.currentPage.set(1);
     this.applyFilters();
   }
 
   setPriceRange(priceRange: number): void {
     this.priceRange = priceRange;
 
+    this.currentPage.set(1);
     this.applyFilters();
   }
 
-  private applyFilters(): void {
+  setCurrentPage(page: number): void {
+    this.currentPage.set(page);
+
+    this.applyFilters();
+  }
+
+  applyFilters(): void {
     let filteredHotels = this.hotelService.hotels();
 
     if (this.searchTerm) {
@@ -62,6 +76,8 @@ export class HotelFilterService {
     if (this.priceRange) {
       filteredHotels = this.filterByPriceRange(filteredHotels);
     }
+
+    filteredHotels = this.paginateHotels(filteredHotels);
 
     this.filteredHotels.set(filteredHotels);
   }
@@ -84,5 +100,14 @@ export class HotelFilterService {
 
   private filterByPriceRange(hotels: Hotel[]): Hotel[] {
     return hotels.filter((hotel) => hotel.price <= this.priceRange);
+  }
+
+  private paginateHotels(hotels: Hotel[]): Hotel[] {
+    const start = (this.currentPage() - 1) * this.itemsPerPage();
+    const end = start + this.itemsPerPage();
+
+    this.totalItems.set(hotels.length);
+
+    return hotels.slice(start, end);
   }
 }
