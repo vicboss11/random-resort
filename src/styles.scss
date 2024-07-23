@@ -3,3 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+label,
+input[type="checkbox"] {
+  cursor: pointer;
+}
