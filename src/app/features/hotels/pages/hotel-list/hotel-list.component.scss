@@ -1,0 +1,21 @@
+.hotel-list__container {
+  grid-template-areas: "aside article" ". nav";
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
+}
+
+.hotel-list__aside {
+  grid-area: aside;
+}
+
+.hotel-list__article {
+  grid-area: article;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.hotel-list__nav {
+  grid-area: nav;
+}
