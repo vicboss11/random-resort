@@ -1,14 +1,16 @@
 <section class="flex flex-col">
   @if (title) {
-  <span>{{ title }}</span>
+  <span class="font-medium">{{ title }}</span>
   }
 
   <section class="flex flex-col">
-    <label class="flex items-center">
+    <label class="flex items-center gap-2 p-3">
       <span>
         {{ min }}
       </span>
+
       <input
+        class="h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
         type="range"
         [min]="min"
         [max]="max"
@@ -16,15 +18,17 @@
         [(ngModel)]="rangeValue"
         (input)="onRangeChange($event)"
       />
+
       <span>
         {{ max }}
       </span>
     </label>
 
-    <span>
+    <span class="px-3">
       @if (element) {
       {{ element }}: 
       }
+
       {{ rangeValue }}
     </span>
   </section>
