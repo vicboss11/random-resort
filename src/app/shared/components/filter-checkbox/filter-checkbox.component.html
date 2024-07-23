@@ -1,0 +1,18 @@
+<section class="flex flex-col">
+  @if (title) {
+  <span>{{ title }}</span>
+  }
+
+  <section class="flex flex-col">
+    @for (option of filterOptions; let index = $index; track index) {
+    <label>
+      <input
+        type="checkbox"
+        [value]="option.value"
+        (change)="onCheckboxChange(option, $event)"
+      />
+      {{ option.name }}
+    </label>
+    }
+  </section>
+</section>
