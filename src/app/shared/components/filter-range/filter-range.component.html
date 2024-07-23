@@ -1,0 +1,31 @@
+<section class="flex flex-col">
+  @if (title) {
+  <span>{{ title }}</span>
+  }
+
+  <section class="flex flex-col">
+    <label class="flex items-center">
+      <span>
+        {{ min }}
+      </span>
+      <input
+        type="range"
+        [min]="min"
+        [max]="max"
+        [step]="step"
+        [(ngModel)]="rangeValue"
+        (input)="onRangeChange($event)"
+      />
+      <span>
+        {{ max }}
+      </span>
+    </label>
+
+    <span>
+      @if (element) {
+      {{ element }}: 
+      }
+      {{ rangeValue }}
+    </span>
+  </section>
+</section>
