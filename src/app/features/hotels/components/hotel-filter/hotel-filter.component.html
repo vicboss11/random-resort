@@ -1,3 +1,28 @@
 <section>
-  <app-filter-search (searchChange)="onSearchChange($event)" />
+  <app-filter-search (searchChange)="onSearchTermChange($event)" />
+
+  <app-filter-checkbox
+    title="Filtrar por estrellas"
+    [filterOptions]="filterStarCheckboxOptions"
+    (filterOptionsChange)="onStarOptionsChange($event)"
+  />
+
+  <app-filter-range
+    element="Valoración"
+    title="Filtrar por valoración"
+    [min]="filterRateRangeOptions.min"
+    [max]="filterRateRangeOptions.max"
+    [step]="filterRateRangeOptions.step!"
+    (rangeChange)="onRateRangeChange($event)"
+  />
+
+  <app-filter-range
+    element="Precio"
+    title="Filtrar por precio"
+    [min]="filterPriceRangeOptions.min"
+    [max]="filterPriceRangeOptions.max"
+    [step]="filterPriceRangeOptions.step!"
+    [defaultValue]="filterPriceRangeOptions.default!"
+    (rangeChange)="onPriceRangeChange($event)"
+  />
 </section>
