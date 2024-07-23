@@ -1,0 +1,11 @@
+.active {
+  background-color: #00ccffb6;
+  color: #fff;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+
+  cursor: not-allowed;
+}

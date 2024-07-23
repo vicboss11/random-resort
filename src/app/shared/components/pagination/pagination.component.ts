@@ -5,6 +5,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './pagination.component.html',
+  styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent {
   @Input() currentPage = 1;
