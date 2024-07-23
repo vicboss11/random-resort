@@ -1,0 +1,17 @@
+.hotel-item__info {
+  display: grid;
+  grid-template-areas: "address address" "price rating";
+  gap: 0.5rem;
+}
+
+.hotel-item__address {
+  grid-area: address;
+}
+
+.hotel-item__price {
+  grid-area: price;
+}
+
+.hotel-item__rate {
+  grid-area: rating;
+}
