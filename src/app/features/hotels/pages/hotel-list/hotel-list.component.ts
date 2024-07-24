@@ -31,7 +31,7 @@ export default class HotelListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.hotelService.loadHotels().subscribe((hotels) => {
+    this.hotelService.getHotels().subscribe((hotels) => {
       this.hotels.set(hotels);
       this.filteredHotels.set(hotels);
 

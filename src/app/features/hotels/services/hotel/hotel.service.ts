@@ -14,7 +14,7 @@ export class HotelService {
 
   constructor(private readonly http: HttpClient) {}
 
-  loadHotels(): Observable<Hotel[]> {
+  getHotels(): Observable<Hotel[]> {
     return this.http.get<Hotel[]>(`${this.apiBaseUrl}/hotels`).pipe(
       catchError((error) => {
         console.error('Error fetching hotels: ', error);
