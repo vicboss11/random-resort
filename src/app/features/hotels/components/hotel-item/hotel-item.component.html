@@ -1,3 +1,4 @@
+@if ( hotel ) {
 <section
   class="hotel-item flex flex-col max-w-[250px] w-full shadow-xl p-3 h-full rounded-xl hover:scale-105 transition duration-500 ease-in-out"
 >
@@ -21,7 +22,9 @@
     <div class="hotel-item__info h-full">
       <address class="hotel-item__address">{{ hotel.address }}</address>
 
-      <span class="hotel-item__price mt-auto text-orange-400 text-3xl font-bold">
+      <span
+        class="hotel-item__price mt-auto text-orange-400 text-3xl font-bold"
+      >
         {{ hotel.price }} <span class="text-base">€</span>
       </span>
 
@@ -31,3 +34,4 @@
     </div>
   </div>
 </section>
+}
