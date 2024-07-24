@@ -11,19 +11,26 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
+
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'apps-angular-technical-test' title`, () => {
+  it(`should have the 'Hoteles' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('apps-angular-technical-test');
+
+    expect(app.title).toEqual('Hoteles');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
+
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, apps-angular-technical-test');
+
+    const nativeEl = fixture.nativeElement as HTMLElement;
+
+    expect(
+      nativeEl.querySelector('app-header header > span:first-of-type')?.textContent
+    ).toContain('Hoteles');
   });
 });
