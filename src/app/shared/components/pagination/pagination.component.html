@@ -1,6 +1,6 @@
 <ul class="flex gap-4 justify-center items-center">
   <li
-    class="hover:underline"
+    class="cursor-pointer hover:underline"
     [class.disabled]="currentPage === 1"
     role="button"
     (click)="previousPage()"
@@ -12,7 +12,7 @@
     <ul class="flex gap-2">
       @for (page of pages; track $index) {
       <li
-        class="flex justify-center items-center w-7 h-7 text-lg rounded shadow-md hover:shadow-lg hover:bg-slate-200 hover:-translate-y-1 transition-all"
+        class="flex justify-center items-center w-7 h-7 text-lg rounded shadow-md cursor-pointer hover:shadow-lg hover:bg-slate-200 hover:-translate-y-1 transition-all"
         [class.active]="page === currentPage"
         role="button"
         (click)="onPageChange(page)"
@@ -24,7 +24,7 @@
   </li>
 
   <li
-    class="hover:underline"
+    class="cursor-pointer hover:underline"
     [class.disabled]="currentPage === totalPages"
     role="button"
     (click)="nextPage()"
