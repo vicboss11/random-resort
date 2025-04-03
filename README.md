@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/assets/logo.png" alt="Ávoristech" /><br />
+  <img src="src/assets/logo.png" alt="Random Resort" /><br />
 </p>
 
 
