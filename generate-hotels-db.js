@@ -1,6 +1,6 @@
 // Importar las dependencias necesarias
-const fs = require('fs');
-const { faker } = require('@faker-js/faker');
+const fs = require("fs");
+const { faker } = require("@faker-js/faker");
 
 const NUM_HOTELS = 100;
 
@@ -10,11 +10,17 @@ const generateHotels = () => {
     hotels.push({
       id: faker.string.uuid(),
       name: `Hotel ${faker.word.words(2)}`,
-      image: faker.image.urlPlaceholder({ width: 240, height: 180, text: '' }),
+      image: faker.image.urlPicsumPhotos({
+        width: 240,
+        height: 180,
+        blur: 0,
+      }),
       address: faker.location.streetAddress(),
-      stars: faker.number.int({min: 1, max: 5}),
-      rate: parseFloat(faker.number.float({min: 0, max: 5, fractionDigits: 1})),
-      price: faker.number.float({min: 50, max: 1000, fractionDigits: 2}),
+      stars: faker.number.int({ min: 1, max: 5 }),
+      rate: parseFloat(
+        faker.number.float({ min: 0, max: 5, fractionDigits: 1 })
+      ),
+      price: faker.number.float({ min: 50, max: 1000, fractionDigits: 2 }),
     });
   }
   return hotels;
@@ -22,10 +28,10 @@ const generateHotels = () => {
 
 const generateDb = () => {
   const data = {
-    hotels: generateHotels()
+    hotels: generateHotels(),
   };
 
-  fs.writeFileSync('db.json', JSON.stringify(data, null, 2));
+  fs.writeFileSync("db.json", JSON.stringify(data, null, 2));
 };
 
 generateDb();
