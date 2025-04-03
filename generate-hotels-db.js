@@ -6,6 +6,7 @@ const NUM_HOTELS = 100;
 
 const generateHotels = () => {
   const hotels = [];
+
   for (let id = 0; id < NUM_HOTELS; id++) {
     hotels.push({
       id: faker.string.uuid(),
@@ -23,6 +24,7 @@ const generateHotels = () => {
       price: faker.number.float({ min: 50, max: 1000, fractionDigits: 2 }),
     });
   }
+  
   return hotels;
 };
 
